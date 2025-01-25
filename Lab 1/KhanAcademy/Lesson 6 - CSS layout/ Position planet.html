@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Position planet</title>
+        <style>
+            body {
+                position: relative; /* Makes it the reference for absolute positioning */
+            }
+            #planet {
+                width: 300px;
+                position: relative; /* Keeps planet's position relative to body */
+            }
+            
+            #greeting {
+                background: rgb(255, 255, 0);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width: 262px;
+                position: absolute;
+                top: 150px; /* Adjust this to place the greeting */
+                left: 20px; /* Adjust this to center or position the greeting */
+                z-index: 2; /* Ensures greeting is on top of creature */
+            }
+            
+            #creature {
+                position: absolute; /* Allows the creature to be placed on top of the planet */
+                top: 40px; /* Adjust this to position the creature vertically */
+                left: 90px; /* Adjust this to position the creature horizontally */
+                width: 100px; /* Adjust size as needed */
+                z-index: 1; /* Ensures creature is behind the greeting */
+            }
+        </style>
+    </head>
+    <body>
+        
+        <img id="planet" src="https://www.kasandbox.org/programming-images/space/planet.png" width="300">
+        
+        <div id="greeting">
+            <p>Hello! Welcome to position planet!</p>
+        </div>
+        
+        <img id="creature" src="https://www.kasandbox.org/programming-images/avatars/mr-pink.png">
+        
+
+    </body>
+</html>
