@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook – log in or sign up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 980px;
+            width: 100%;
+        }
+        .left {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .left h1 {
+            color: #1877f2;
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+        .left p {
+            font-size: 24px;
+        }
+        .right {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            text-align: center;
+        }
+        .right input {
+            width: 100%;
+            padding: 12px; /* Сделано короче */
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* Уменьшен шрифт */
+        }
+        .right button {
+            width: 100%;
+            background-color: #1877f2;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .right button:hover {
+            background-color: #165ecc;
+        }
+        .forgot {
+            display: block;
+            margin: 12px 0;
+            color: #1877f2;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .forgot:hover {
+            text-decoration: underline;
+        }
+        .line {
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        .create-account {
+            background: #42b72a;
+            color: white;
+            padding: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .create-account:hover {
+            background: #36a420;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Email or phone number">
+            <input type="password" placeholder="Password">
+            <button>Log In</button>
+            <a href="#" class="forgot">Forgotten password?</a>
+            <div class="line"></div>
+            <div class="create-account">Create new account</div>
+        </div>
+    </div>
+</body>
+</html>

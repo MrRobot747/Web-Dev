@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fafafa;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .phone {
+            width: 350px;
+            height: auto;
+            margin-right: 30px;
+        }
+        .login-box {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .app-links img {
+            width: 120px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="photos_inst.png" alt="Phone Preview" class="phone">
+        <div class="login-box">
+            <h1>Instagram</h1>
+            <input type="text" placeholder="Телефон, имя пользователя или эл. адрес">
+            <input type="password" placeholder="Пароль">
+            <button class="login-btn">Войти</button>
+            <p>Забыли пароль?</p>
+            <p>У вас нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+            <div class="app-links">
+                <img src="appstore.png" alt="App Store">
+                <img src="googleplay.png" alt="Google Play">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
