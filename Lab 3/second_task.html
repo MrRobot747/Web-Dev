@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 20px;
+    }
+    .todo-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    #newItem {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #28a745;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    .done {
+      text-decoration: line-through;
+      color: #999;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .actions button {
+      background: #dc3545;
+    }
+    .actions button:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <div>
+      <input type="text" id="newItem" placeholder="Add new item..." />
+      <button onclick="addItem()">Add</button>
+    </div>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById("newItem");
+      const itemText = input.value.trim();
+      if (itemText === "") return;
+
+      // Create new list item
+      const li = document.createElement("li");
+
+      // Create the checkbox
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", function() {
+        // Toggle the done class for strikethrough effect
+        if (this.checked) {
+          span.classList.add("done");
+        } else {
+          span.classList.remove("done");
+        }
+      });
+
+      // Create the span for text
+      const span = document.createElement("span");
+      span.textContent = itemText;
+
+      // Create delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.addEventListener("click", function() {
+        li.parentNode.removeChild(li);
+      });
+
+      // Wrap delete button inside a div (for potential future actions)
+      const actionsDiv = document.createElement("div");
+      actionsDiv.className = "actions";
+      actionsDiv.appendChild(deleteBtn);
+
+      // Append checkbox, text, and actions to list item
+      li.appendChild(checkbox);
+      li.appendChild(span);
+      li.appendChild(actionsDiv);
+
+      // Add new item to the list
+      document.getElementById("todoList").appendChild(li);
+
+      // Clear the input field
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
